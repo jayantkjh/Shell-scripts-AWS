@@ -2,7 +2,7 @@
 #############################
 # Author: Jayant Kumar Pathak
 # Date : 6th Jan 2026
-# Version : v2
+# Version : v4
 ####################################################
 # This shell script will monitor AWS resource usage
 ####################################################

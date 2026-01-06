@@ -9,12 +9,21 @@
 
 # AWS S3
 # AWS EC2
-# AWS Lambda
+# AWS Lambda 
 # AWS IAM user
 
+set -x
 set -e
 set -o pipefail
 
+# Create logs directory if it doesn't exist
+LOG_DIR="/var/log/aws_monitor"
+mkdir -p "$LOG_DIR"
+
+# Set output file with timestamp
+OUTPUT_FILE="$LOG_DIR/aws_resource_report_$(date +%Y%m%d_%H%M%S).txt"
+
+{
 echo "=================================================="
 echo "AWS RESOURCE MONITORING DASHBOARD"
 echo "=================================================="
@@ -52,3 +61,7 @@ echo ""
 echo "=================================================="
 echo "END OF REPORT"
 echo "=================================================="
+} | tee "$OUTPUT_FILE"
+
+echo ""
+echo "Report saved to: $OUTPUT_FILE"

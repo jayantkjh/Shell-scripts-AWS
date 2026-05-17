@@ -4,7 +4,7 @@
 # Date : 6th Jan 2026
 # Version : v4
 ####################################################
-# This shell script will monitor AWS resource usage
+# This shell script will report AWS resource usage
 ####################################################
 
 # AWS S3
